@@ -34,7 +34,7 @@ function validateGuess(guess){
     }
     else{
         prevGuesses.push(guess);
-        if(numOfGuesses === 10){
+        if(numOfGuesses === 6){
             displayGuess(guess);
             displayMessage(`Game Over. Random number was ${randomNum}`);
             endGame();
@@ -63,7 +63,7 @@ function displayGuess(guess){
     ip.value = '';
     guessN.innerHTML += `${guess}, `;
     numOfGuesses++;
-    remaining.innerHTML = `${11 - numOfGuesses} `;
+    remaining.innerHTML = `${7 - numOfGuesses} `;
 }
 
 
@@ -88,7 +88,7 @@ function newGame() {
     prevGuesses = [];
     numOfGuesses = 1;
     guessN.innerHTML = '';
-    remaining.innerHTML = `${11 - numOfGuesses} `;
+    remaining.innerHTML = `${7 - numOfGuesses} `;
     ip.removeAttribute('disabled');
     startOver.removeChild(p);
     msgs.innerHTML='';
