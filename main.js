@@ -1,4 +1,4 @@
-let randomNum = parseInt(Math.random()*100+1);
+let randomNum = 50;
 
 const bt = document.querySelector("#button")
 const ip = document.querySelector("#input")
@@ -34,14 +34,12 @@ function validateGuess(guess){
     }
     else{
         prevGuesses.push(guess);
+        displayGuess(guess);
+        checkGuess(guess);
         if(numOfGuesses === 6){
             displayGuess(guess);
             displayMessage(`Game Over. Random number was ${randomNum}`);
             endGame();
-        }
-        else{
-            displayGuess(guess);
-            checkGuess(guess);
         }
     }
 }
