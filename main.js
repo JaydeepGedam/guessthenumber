@@ -34,9 +34,12 @@ function validateGuess(guess){
     }
     else{
         prevGuesses.push(guess);
-        displayGuess(guess);
-        checkGuess(guess);
-        if(numOfGuesses === 6){
+        
+        if(numOfGuesses !== 6){
+            displayGuess(guess);
+            checkGuess(guess);
+        }
+        else{
             displayGuess(guess);
             displayMessage(`Game Over. Random number was ${randomNum}`);
             endGame();
