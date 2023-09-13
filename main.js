@@ -1,4 +1,4 @@
-let randomNum = 50;
+let randomNum = Math.floor((Math.random() * 100) + 1);;
 
 const bt = document.querySelector("#button")
 const ip = document.querySelector("#input")
@@ -85,7 +85,7 @@ function endGame() {
 function newGame() {
     const newGameButton = document.querySelector('#newGame');
     newGameButton.addEventListener('click', function (e) {
-    randomNum = 50;
+    randomNum = Math.floor((Math.random() * 100) + 1);
     prevGuesses = [];
     numOfGuesses = 1;
     guessN.innerHTML = '';
